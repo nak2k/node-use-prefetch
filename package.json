@@ -1,0 +1,55 @@
+{
+  "name": "use-prefetch",
+  "version": "0.1.0",
+  "description": "Hook and component for prefetch",
+  "author": "Kengo Nakatsuka <kengo.nakatsuka@gmail.com>",
+  "bugs": {
+    "url": "https://github.com/nak2k/node-use-prefetch/issues"
+  },
+  "devDependencies": {
+    "@testing-library/react": "^11.2.2",
+    "@types/jest": "^26.0.16",
+    "@types/react": "^17.0.0",
+    "jest": "^26.6.3",
+    "npm-run-all": "^4.1.5",
+    "react": "^17.0.1",
+    "rimraf": "^3.0.2",
+    "ts-jest": "^26.4.4",
+    "typescript": "^4.1.2"
+  },
+  "peerDependencies": {
+    "react": "^16.6.0 || ^17.0.0"
+  },
+  "homepage": "https://github.com/nak2k/node-use-prefetch",
+  "keywords": [
+    "react"
+  ],
+  "license": "MIT",
+  "main": "lib",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nak2k/node-use-prefetch.git"
+  },
+  "scripts": {
+    "build": "tsc",
+    "clean": "rimraf lib",
+    "prepublishOnly": "run-s test clean build",
+    "postpublish": "npm-sns",
+    "test": "jest"
+  },
+  "jest": {
+    "transform": {
+      ".(ts|tsx)": "ts-jest"
+    },
+    "testRegex": "test/.*\\.(ts|tsx)$",
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js"
+    ]
+  },
+  "files": [
+    "README.md",
+    "lib/"
+  ]
+}
