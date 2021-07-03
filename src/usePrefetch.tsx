@@ -1,7 +1,18 @@
 import { useCallback, useRef } from 'react';
 
 export interface PrefetchOptions {
+  /**
+   * A cooldown time to avoid calling `prefetch` in succession.
+   * 
+   * @default 300000 millisec
+   */
   cooldown?: number;
+
+  /**
+   * A duration to wait before calling `prefetch`.
+   * 
+   * @default 200 millisec
+   */
   delay?: number;
 }
 

@@ -4,7 +4,19 @@ import { usePrefetch } from './usePrefetch';
 export interface PrefetchProps {
   prefetch: () => void;
   render: (callbackRef: (node: HTMLElement | null) => void) => ReactNode;
+
+  /**
+   * A cooldown time to avoid calling `prefetch` in succession.
+   *
+   * @default 300000 millisec
+   */
   cooldown?: number;
+
+  /**
+   * A duration to wait before calling `prefetch`.
+   *
+   * @default 200 millisec
+   */
   delay?: number;
 }
 
