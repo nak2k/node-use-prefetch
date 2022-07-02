@@ -33,7 +33,7 @@
   "scripts": {
     "build": "tsc",
     "clean": "rimraf lib",
-    "prepublishOnly": "run-s test clean build",
+    "prepublishOnly": "run-s clean build test",
     "postpublish": "npm-sns",
     "test": "jest"
   },
